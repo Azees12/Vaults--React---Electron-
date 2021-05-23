@@ -7,15 +7,31 @@ import { useState } from "react";
 import {SignUp} from './../../compenents/submission';
 
 
-function Intial () {
+
+function Intial () 
+
+{
+ 
     const [toggleState, setToggleState] = useState(1);
     const toggleTab = (index) => {
       setToggleState(index);
     };
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    function submitForm() {
+      setIsSubmitted(true);
+    }
+
     return (
-        <div>
+        <div className="body">
+        <div className="main">
+
+
+        
+        
+      <div className="">
         <div className="image">
-            <img src= {vault}/>
+            <img src= {vault} alt="something here"/>
         </div>
         <div className="tab-block">
         <button
@@ -33,15 +49,19 @@ function Intial () {
         </div>
         <div className="switch">
           {
-              toggleState === 1 ? <Login/> : <SignUp/>
+              toggleState === 1 ? <Login submitForm={submitForm} /> : <SignUp/>
           }
       
         </div>
+            <Footer/> 
+        </div>
+
+
        
         
-       <Footer/> 
+       
         </div>
-      
+      </div>
        )
 } 
 

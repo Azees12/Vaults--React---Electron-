@@ -55,3 +55,7 @@ input:focus {
 .btn:focus{
     outline: none;
 }
+.error{
+    margin-top: -45px; 
+    color:red;
+}

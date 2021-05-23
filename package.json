@@ -21,6 +21,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-spinners": "^0.11.0",
     "zustand": "^3.5.1",
     "zustand-persist": "^0.3.1"
   },
@@ -49,9 +50,10 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^5.0.0",
+    "concurrently": "^6.1.0",
     "electron": "^7.1.0",
     "electron-builder": "^22.1.0",
+    "react-devtools-electron": "^4.7.0",
     "wait-on": "^5.3.0"
   }
 }

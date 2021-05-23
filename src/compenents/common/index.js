@@ -1,7 +1,11 @@
 import Footer from './footer';
-import Sidebar from './sidebar';
+import Navbar from './navbar';
+import SideDrawer from './sidedrawer/sidedrawer';
+import Backdrop from './backdrop/Backdrop';
 
 export {
     Footer,
-    Sidebar,
+    Navbar,
+    SideDrawer,
+    Backdrop
 }

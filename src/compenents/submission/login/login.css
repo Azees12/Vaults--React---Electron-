@@ -22,10 +22,7 @@ label {
 input {
     margin-top: 6px;
     min-width: 18em;;
-    height: 28px;
-    padding: 0px 10px;
     border-radius: 10px;
-    margin-bottom: 31px;
     transition: all 250ms ease-in-out;
     text-align: center;
     font-size:17px;
@@ -58,4 +55,14 @@ input:focus {
 
 .label-text {
     padding-bottom: 3px;
+}
+
+.error{
+    margin-top: -45px; 
+    color:red;
+}
+
+.error_api{
+    margin-top: -20px; 
+    color:red;
 }

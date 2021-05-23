@@ -3,6 +3,8 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const path = require("path");
 const isDev = require("electron-is-dev");
+
+
 let mainWindow;
 function createWindow() {
     mainWindow = new BrowserWindow({ 
@@ -11,8 +13,7 @@ function createWindow() {
         icon: ""
     });
     
-    const win = new BrowserWindow()
-    win.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
      
 
     mainWindow.loadURL(
