@@ -10,12 +10,11 @@ function createWindow() {
     mainWindow = new BrowserWindow({ 
         width: 1200, 
         height:1080,
+        minWidth:960,
+        minHeight:1280,
         icon: ""
     });
     
-    mainWindow.webContents.openDevTools()
-     
-
     mainWindow.loadURL(
         isDev
         ? "http://localhost:3000"

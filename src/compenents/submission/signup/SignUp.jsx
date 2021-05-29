@@ -1,12 +1,13 @@
 import React from 'react';
 import './SignUp.css';
-import { FaUserCircle, FaLock  } from 'react-icons/fa'
+import { FaUserCircle, FaLock,FaCheckCircle } from 'react-icons/fa'
 import { useSignUp} from './../../Logic';
+import { create } from 'zustand';
 
 
-function SignUp () {
+function SignUp ({submitForm}) {
     
-    const { handleChange, handleSubmit, values, errors } = useSignUp();
+    const { handleChange, handleSubmit, values, errors, success } = useSignUp(submitForm);
 
     return (
     <div className="form" >
@@ -18,6 +19,7 @@ function SignUp () {
             type="text" 
             name="username"
             placeholder="Create a Username"
+            className="login_input"
             value={values.username}
             onChange={handleChange} />
         </div>
@@ -31,6 +33,7 @@ function SignUp () {
         type="password" 
         name="password"
         placeholder="Create a Password"
+        className="login_input"
         value={values.password}
         onChange={handleChange} 
         />
@@ -47,13 +50,16 @@ function SignUp () {
         type="password" 
         name="password2" 
         placeholder="Re-enter Password"
+        className="login_input"
         value={values.password2}
         onChange={handleChange} 
         />
          {errors.password2 &&<div className="error">  <p>*{errors.password2}</p></div>}
+         
     </div>
-
     <div className="form-group">
+         {success ?  <div className="success"> <icon> <FaCheckCircle/></icon><p>User created </p> </div> : <div> </div>}
+         {errors.api &&<div className="error_api">  <p>*{errors.api}</p></div>}
         <button type="button" className="btn" onClick= {handleSubmit}> Sign Up </button>
     </div> 
     </div>

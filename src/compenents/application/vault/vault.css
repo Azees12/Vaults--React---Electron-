@@ -1,0 +1,165 @@
+.vault{
+    height: 90.2vh;
+    background-color: #0e0f11;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white ;
+    border-right:  1px solid white;
+    overflow-x: hidden;
+    overflow-y: "hidden"
+}
+.vault_header{
+    height: 7vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color:white;
+    text-align: center;
+    font-weight: 700;
+    line-height: 75px;
+    border-bottom: black;
+    text-decoration: underline;
+
+}
+.vault_content {
+    display: flex;
+    width: 100%;
+    height:83vh;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white ;
+    border-right:  1px solid white;
+}
+.vault_filters {
+    display: block;
+    width: 25%;
+    height: 100%;
+    border-top: 1px solid white;
+    border-left: 1px solid white ;
+    border-right:  1px solid #2386c8;
+    color: white;
+}
+
+.vault_filters_body{
+    text-align: center;
+}
+
+.vault_filters_body_input{
+ width: 60%;
+ height: 2vh;
+ text-align: center;
+ font-size: medium;
+}
+
+.filter_input{
+  margin-top: 10%;
+}
+
+.vault_filters_header {
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+    border-bottom: 1px solid #2386c8;
+    padding: 15px;
+    text-align: center;
+    height: 2.2vh;
+
+}
+
+
+
+.vault_block{
+  width: 100%;
+}
+
+
+
+
+
+.tab-block2 {
+    display: flex;
+    flex: 70%; 
+}
+
+.tabs2 {
+    padding: 15px;
+    text-align: center;
+    width: 33%;
+    height: 2.2vh;
+    background: #0e0f11;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white ;
+    border-right:  1px solid white;
+    color: white;
+    box-sizing: content-box;
+    outline: none;
+    font-size: 20px;
+    transition: all 400ms ease-out;
+    
+  }
+  .tabs2:not(:last-child){
+    border-right: 0px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .active-tabs2  {
+    background: #2386c8;
+    border-bottom: 1px solid white;
+    transition: all 400ms ease-in-out;
+    color: white;
+
+  }
+  
+  .active-tabs2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%,-50%);
+    width: calc(100% );
+    background: #2386c8;
+  }
+  
+  button {
+    border: none;
+    border-radius: 0px;
+    
+  }
+
+  .switch {
+    transition: all 1ms ease-in-out;
+  }
+  
+  .test{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .select{
+    height: 90.2vh;
+    background-color: #0e0f11;
+    display: flex;
+    color: darkgray;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    overflow: hidden;
+    overflow-y: "hidden";
+    font-size: 3vh;
+  }
+
+  .select-body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  

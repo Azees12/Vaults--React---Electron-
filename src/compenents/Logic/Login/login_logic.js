@@ -2,14 +2,11 @@ import { useState, useEffect, React } from 'react';
 import validateLogin from './validation';
 import axios from 'axios'
 import useStore from './../../../store/userStore'
-import { Redirect, useHistory } from 'react-router';
-
 
 const useLogin = () => {
 
     const setUser = useStore(state => state.setUser)
     const username = useStore(state => state.username)
-    const history = useHistory();
     const [res,setRes] = useState({})
     const [values, setValues] = useState({
         username: '',
@@ -33,8 +30,6 @@ const useLogin = () => {
          console.log(errors === {})
          console.log(errors)
          console.log(res.status =="True")
-        
-
         }
         } 
 
@@ -47,7 +42,7 @@ const useLogin = () => {
             }
         if(res.token != undefined)
             {
-          setUser(res.token,res.username,res.user_id,res.vaults)
+          setUser(res.token,res.username,res.user_id)
             }
     }
       console.log(res,username)

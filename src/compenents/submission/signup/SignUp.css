@@ -19,7 +19,7 @@ label {
 
 }
 
-input {
+.login_input {
     margin-top: 0px;
     min-width: 18em;;
     height: 28px;
@@ -33,7 +33,7 @@ input {
 
 
 
-input:focus {
+.login_input:focus {
     outline: none;
     box-shadow: 0px 0px 12px 0.8px darkgray ;
    
@@ -59,3 +59,29 @@ input:focus {
     margin-top: -45px; 
     color:red;
 }
+.error_api{
+    margin-top: -20px; 
+    color:red;
+}
+
+.success{
+ 
+    display: flex;
+       
+    flex-direction: column;
+}
+
+
+.success p{
+    color:green;
+    margin-top: -0.5rem;
+    font-size: 1.5rem;
+
+}
+
+.success icon{
+    color:green;
+    font-size: 1.5rem;
+
+}
+

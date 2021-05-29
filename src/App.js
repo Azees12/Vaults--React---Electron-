@@ -10,11 +10,11 @@ function App() {
    
  
        <Suspense fallback= {
-        <body className="App-body">
+        <div className="App-body">
         <div className="App-Intial">
          <MoonLoader color={"#ffff"}  size={150} />
         </div>
-        </body>
+        </div>
        }>
         <Routing/>
       </Suspense>

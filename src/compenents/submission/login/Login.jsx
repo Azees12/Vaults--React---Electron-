@@ -5,21 +5,22 @@ import { useLogin} from './../../Logic';
 
 
 
-function Login ({submitForm}) {
+function Login () {
     
-    const { handleChange, handleSubmit, values, errors, api_error } = useLogin(submitForm);
+    const { handleChange, handleSubmit, values, errors} = useLogin();
     
 
     return (
 
     <form className="form" onSubmit={handleSubmit} >
         <div className="form-group">
-        <div><icons><FaUserCircle/></icons>
+        <div><icon><FaUserCircle/></icon>
             <label> Username</label>
         </div>
             <input  
             type="text" 
             name="username"
+            className="login_input"
             placeholder="Enter Username"
             value={values.username}
             onChange={handleChange} 
@@ -28,17 +29,19 @@ function Login ({submitForm}) {
         </div>
         
     <div className="form-group">
-        <div><icons><FaLock/></icons>
+        <div><icon><FaLock/></icon>
         <label> Password</label>
         </div>
         <input 
             type="password" 
-            name="password" 
+            name="password"
+            className="login_input"
             placeholder="Enter Password"
             value={values.password}
             onChange={handleChange} 
         />
              {errors.password &&<div className="error">  <p>*{errors.password}</p></div>}
+             
     </div>
     <div className="form-group">
     {errors.api   &&<div className="error_api">  <p>*{errors.api}</p></div>}

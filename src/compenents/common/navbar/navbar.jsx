@@ -20,8 +20,8 @@ function Navbar(props) {
             </div>
             <div className="Right">
                 <div className="utliR">
-                    <a>Logged in as {user}</a>
-                    <i onClick = {props.logout()} className="logout" ><FaSignOutAlt size={18}/> </i>
+                    <a>Logged In as {user}</a>
+                    <i onClick = {props.logout()} className="logout" ><FaSignOutAlt size={14}/> </i>
              </div>
                 
             </div>

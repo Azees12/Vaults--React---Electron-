@@ -1,10 +1,10 @@
 .main {
   min-height: 100vh;
-  display: flex;
   color: white;
   align-items: center;
   display:flex;
   justify-content: center;
+  
 }
 
 

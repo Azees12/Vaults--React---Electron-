@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import {Footer} from './../../compenents/common';
 import {Login} from '../../compenents/submission'
 import vault from '../../images/vault.png'
 import './intial.css'
 import { useState } from "react";
 import {SignUp} from './../../compenents/submission';
+import MoonLoader from "react-spinners/ClipLoader";
+
+
 
 
 
@@ -47,16 +50,22 @@ function Intial ()
         Sign Up
         </button>
         </div>
+        <Suspense fallback= { <body className="App-body">
+        <div className="App-Intial">
+         <MoonLoader color={"#ffff"}  size={150} />
+        </div>
+        </body>}>
         <div className="switch">
           {
               toggleState === 1 ? <Login submitForm={submitForm} /> : <SignUp/>
           }
-      
-        </div>
-            <Footer/> 
+        </div> 
+        </Suspense>
+            <Footer/>
+        
         </div>
 
-
+ 
        
         
        

@@ -1,29 +1,38 @@
 import create from "zustand"
 import { devtools,persist } from "zustand/middleware"
 import { useEffect } from 'react';
+import Vault from '../compenents/application/vault/index';
 
 export const user = (set) => ({
     
     token:'',
     username: '',
     user_id:{},
-    vault_names: [],
-    vaults:[],
+    activeV:{
+      
+    },
+    activeC:[{}],
 
-    setUser: (token,username,user_id,vaults) => set(() => ({
+    setActiveC: (Cred) => set(() => ({
+        activeC: Cred,     
+    })),
+
+    setActive: (Vault) => set(() => ({
+        activeV: Vault,     
+    })),
+
+
+    setUser: (token,username,user_id) => set(() => ({
         token : token,
         username : username,
         user_id : user_id,
-        vaults: vaults
     })),
 
     clearUser: () => set(() => ({
         token:'',
         username: '',
-        user_id:{},
-        vault_names: [],
-        vaults:[]
-        
+        user_id:'',
+        activeV:''
     })),
 
     
