@@ -4,6 +4,13 @@ import  './credentials.css';
 
 
 function Credential() {
+
+    const toDate = (nondate) => {
+        var date =  Date(nondate * 1000)
+        console.log()
+        return date
+    }
+
     const creds = useStore(state =>state.activeC)
     return (
         <div className="cred">
@@ -16,7 +23,7 @@ function Credential() {
             <div className="cred_list">
                 {creds.credentials.map(cred => 
                 <div key={cred.cred_id.$uuid} className="cred_list_item">
-                <a>{cred.cred_name}</a>   <a>{cred.website}</a>   <a>*********</a>   <a type="password">********</a>   <a>{cred.date_uploaded.$date}</a>
+                <a>{cred.cred_name}</a>   <a>{cred.website}</a>   <a>*********</a>   <a type="password">********</a>   <a>{toDate(cred.date_uploaded.$date)}</a>
                 </div>)}
                 
           
